@@ -1,0 +1,21 @@
+
+<div class="container-fluid d-flex align-items-center justify-content-center">
+    <div>
+        <mat-form-field class="example-form border" appearance="fill">
+            <input matInput placeholder="Pseudo joueur 1"
+                   (keyup)="onSetFirstPlayer($event)">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="example-form" appearance="fill">
+            <input matInput placeholder="Pseudo joueur 2" (keyup)="onSetSecondPlayer($event)">
+        </mat-form-field>
+    </div>
+  <button mat-button class="btn-secondary" [disabled]="begin()">primary</button>
+  <button class="btn btn-success" (click)="onFetch()"> save</button>
+</div>
+
+<div *ngFor="let cpt of stat">
+  {{ cpt.name }}
+</div>
+

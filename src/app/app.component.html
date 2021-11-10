@@ -1,1 +1,11 @@
-<h1 class="text-center">oui</h1>
+<app-players></app-players>
+<div class="p-0 m-0 container-fluid d-flex align-items-stretch">
+
+    <div class="col-3 mx-auto bg-dark border">GFG</div>
+    <div class="col-6 mx-auto bg-danger border">DFFDF</div>
+    <div class="col-3 mx-auto bg-primary border">
+      <div *ngFor="let stat as allPlayerStats()">
+          {{ stat.name }} {{ stat.score }}
+      </div>
+    </div>
+</div>
